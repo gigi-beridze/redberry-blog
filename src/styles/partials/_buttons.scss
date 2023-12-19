@@ -1,0 +1,24 @@
+.default-btn {
+    border: none;
+    cursor: pointer;
+    font-family: 'FiraGO', sans-serif;
+}
+.primary-btn {
+    @extend .default-btn; 
+    background-color: $primary-btn-color;
+    width: 5.625rem;
+    height: 2.5rem;
+    color: white;
+    border-radius: .5rem;
+    font-weight: 600;
+    font-size: .875rem;
+}
+.filter-btn {
+    @extend .default-btn;
+    border-radius: 1.875rem;
+    min-width: 5.25rem;
+    height: 2rem;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}

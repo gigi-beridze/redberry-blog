@@ -1,0 +1,17 @@
+.hero {
+    background-color: $default-bg-color;
+    padding-top: 5rem;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-size: 4rem;
+            color: $default-dark-color;
+            font-weight: 700;
+            font-family: 'FiraGO', sans-serif;
+        }
+    }
+}
