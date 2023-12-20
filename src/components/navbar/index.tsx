@@ -1,9 +1,7 @@
-import { ButtonHTMLAttributes, useState } from "react";
+import { useState } from "react";
 import { Button } from "../ui/button"
 import { Popup } from "../ui/popup";
-interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    text: string;
-  }
+
 export const Navbar = () => {
     const [isPopupVisible, setPopupVisibility] = useState(false);
 
