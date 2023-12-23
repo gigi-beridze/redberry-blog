@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "../ui/button"
 import { Popup } from "../ui/popup";
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const [isPopupVisible, setPopupVisibility] = useState(false);
@@ -11,7 +12,9 @@ export const Navbar = () => {
     return (
         <div className="navbar">
             <div className="container">
-                <img src="/logo.png" alt="logo" />
+                <Link to="/">
+                    <img src="/logo.png" alt="logo" />
+                </Link>
                 <Button text="შესვლა" onClick={openPopup} />
                 {isPopupVisible && <Popup onClose={closePopup} />}
             </div>
