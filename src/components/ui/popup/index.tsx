@@ -72,7 +72,7 @@ export const Popup: React.FC<PopupProps> = ({ onClose }) => {
       {result}
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={onClose}>
-          <img src="src/assets/x.png" alt="x" />
+          <img src="/src/assets/x.png" alt="x" />
         </button>
         {!isValid ? (
           <>

@@ -1,16 +1,15 @@
-import { Blogs } from "./components/blogs"
-import { Filters } from "./components/filters"
-import { Hero } from "./components/hero"
-import { Navbar } from "./components/navbar"
+import { Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { BlogDetails } from './pages/BlogDetails';
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Filters />
-      <Blogs />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog/:blogId" element={<BlogDetails />} />
+      </Routes>
+    </>
   )
 }
 
