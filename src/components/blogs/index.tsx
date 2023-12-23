@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { blog } from '../../models/blog';
+import { Link } from 'react-router-dom';
   
 export const Blogs: React.FC = () => {
     const [blogs, setBlogs] = useState([]);
@@ -48,12 +49,12 @@ export const Blogs: React.FC = () => {
                         ))}
                     </div>
                     <span className="blog-description">{blog.description}</span>
-                    <a className="blog-info-btn">
+                    <Link to={`/blog/${blog.id}`} className="blog-info-btn">
                         სრულად ნახვა
                         <img style={{marginLeft: '4px'}} src="src/assets/arrow.svg" />
-                    </a>
+                    </Link>
                 </div>
-            ))};
+            ))}
         </div>
     </div>
   );
