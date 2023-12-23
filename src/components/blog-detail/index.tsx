@@ -1,3 +1,5 @@
+import Slider  from "../slider";
+
 export const BlogDetail = (data: any) => {
     const blog = data.data;
     return (
@@ -9,6 +11,7 @@ export const BlogDetail = (data: any) => {
                 <span className="detail-blog-title">{blog.title}</span>
                 <span className="detail-blog-description">{blog.description}</span>
             </div>
+            <Slider items={blog}/>  
         </div>
     )
 }
