@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Navbar } from '../components/navbar';
 import { BlogDetail } from '../components/blog-detail';
+import { Slider } from '../components/slider';
 
 interface BlogDetailsParams {
   blogId: string;
@@ -46,7 +47,8 @@ export const BlogDetails: React.FC = () => {
     <div>
                 <Navbar />
                 <BlogDetail data={blogDetails} />
- 
+                <Slider items={blogDetails}/>  
+
     </div>
   );
 };

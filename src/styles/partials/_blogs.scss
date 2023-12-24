@@ -3,6 +3,7 @@
     background-color: $default-bg-color;
     font-family: 'FiraGO', sans-serif;
     padding-bottom: 66px;
+    
     .container {
         display: inline-flex;
         flex-wrap: wrap;
@@ -30,13 +31,14 @@
                 color: #1A1A1F;
                 font-size: 20px;
                 font-weight: 600;
+                min-height: 50px;
             }
             .blog-categories {
                 margin-top: 16px;
                 display: flex;
                 gap: 16px;
                 flex-wrap: wrap;
-               
+
                 .blog-categories-btn {
                     padding: 6px 10px;
                     border: none;
@@ -91,7 +93,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 120px;
     background-color: $default-bg-color;
 
     .detail-blog-texts {
@@ -128,5 +130,10 @@
         margin-top: 40px;
         color: #1A1A1F;
         font-size: 16px;
+    }
+    .detail-back-btn {
+        position: fixed;
+        left: 76px;
+        top: 120px;
     }
 }
