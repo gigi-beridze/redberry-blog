@@ -180,7 +180,7 @@ export const Blogs: React.FC = () => {
   };
 
   const filteredPosts: any = filterPostsByCategories(selectedCategories);
-
+  
   return (
     <div className="blogs">
       <Filters onSelectCategory={handleSelectCategory} />
@@ -208,7 +208,7 @@ export const Blogs: React.FC = () => {
             <span className="blog-description">{blog.description}</span>
             <Link to={`/blog/${blog.id}`} className="blog-info-btn">
               სრულად ნახვა
-              <img style={{ marginLeft: '4px' }} src="src/assets/arrow.svg" alt="arrow" />
+              <img style={{ marginLeft: '4px' }} src="/src/assets/arrow.svg" alt="arrow" />
             </Link>
           </div>
         ))}

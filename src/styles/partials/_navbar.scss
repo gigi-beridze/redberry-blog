@@ -1,7 +1,9 @@
 .navbar {
     border-bottom: .063rem solid $navbar-bg-color;
     background-color: white;
-
+    position: fixed;
+    width: 100%;
+   
     .container {
         height: 5rem;
         display: flex;
