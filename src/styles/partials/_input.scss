@@ -1,9 +1,9 @@
 .email-input-container {
     display: flex;
     flex-direction: column;
-    margin: 1.25rem 0rem;
+    margin-top: 1.25rem;
     font-family: 'FiraGO', sans-serif;
-    
+  
     button {
         width: 100% !important;
     }
@@ -32,14 +32,18 @@
         font-size: .875rem;
     }
 }
-
-  .valid {
-    border: 1px solid green !important; /* Green border for valid */
-  }
-  
-  .invalid {
-    border: 1px solid red !important; /* Red border for error */
-  }
+.invalid {
+  border: 1px solid red !important;
+  background: #FAF2F3 !important;    
+}
+.error-message {
+  color: #EA1919;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
   .red {
     border: 2px solid yellow !important;
   }

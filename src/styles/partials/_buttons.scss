@@ -6,12 +6,13 @@
 .primary-btn {
     @extend .default-btn; 
     background-color: $primary-btn-color;
-    width: 5.625rem;
+    min-width: 5.625rem;
     height: 2.5rem;
     color: white;
     border-radius: .5rem;
     font-weight: 600;
     font-size: .875rem;
+    padding: 10px
 }
 .filter-btn {
     @extend .default-btn;

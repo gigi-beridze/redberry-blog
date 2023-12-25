@@ -2,3 +2,7 @@ export interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElemen
     text: string;
     onClick?: () => void;
 }
+export interface PopupProps {
+    onClose: () => void;
+}
+  
