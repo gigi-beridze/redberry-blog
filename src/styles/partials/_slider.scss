@@ -1,5 +1,10 @@
 .slider {
     margin-top: 96px;
+
+    .slider-items {
+        z-index: -999 !important;
+        position: relative;
+    }
     .slider-header {
         display: flex;
         justify-content: space-between;

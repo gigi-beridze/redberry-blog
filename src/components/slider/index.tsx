@@ -4,9 +4,10 @@ import axios from 'axios';
 import { SliderContent } from './SliderContent';
 import { SlideState, SliderProps } from '../../models/slider';
 import 'swiper/swiper-bundle.css';
+import { blog } from '../../models/blog';
 
 export const Slider: React.FC<SliderProps> = (item: any) => {
-  const [apiData, setApiData] = useState<any[]>([]),
+  const [apiData, setApiData] = useState<blog[]>([]),
         [swiperRef, setSwiperRef] = useState<any>(),
         itemCategory = item.items.categories,
         [slideBegOrNot, handleSlideByState] = useState<SlideState>({
@@ -59,7 +60,6 @@ export const Slider: React.FC<SliderProps> = (item: any) => {
     };
     fetchData();
   }, [itemCategory]);
-  console.log(apiData)
 
   return (
     <div className="slider">
@@ -126,9 +126,9 @@ export const Slider: React.FC<SliderProps> = (item: any) => {
                   description={item.description}
                   image={item.image}
                   author={item.author}
-                  date={item.publish_date}
+                  publish_date={item.publish_date}
                   categories={item.categories}
-                  alt={item.id}
+                  id={item.id}
                 />
               </SwiperSlide>
             ))}

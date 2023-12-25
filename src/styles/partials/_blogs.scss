@@ -1,21 +1,20 @@
 .blogs {
-    padding-top: 36px;
+    padding-top: 2.25rem;
     background-color: $default-bg-color;
-    font-family: 'FiraGO', sans-serif;
-    padding-bottom: 66px;
+    padding-bottom: 4.125rem;
     
     .container {
         display: inline-flex;
         flex-wrap: wrap;
-        gap: 56px 32px;
+        gap: 3.5rem 2rem;
 
         .blog {
             display: flex;
             flex-direction: column;
-            max-width: 408px;
+            max-width: 25.5rem;
 
             .blog-author {
-                margin-top: 24px;
+                margin-top: 1.5rem;
                 color: #1A1A1F;
                 font-size: 16px;
                 font-weight: 500;

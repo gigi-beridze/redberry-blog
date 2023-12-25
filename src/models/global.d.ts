@@ -4,5 +4,10 @@ export interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElemen
 }
 export interface PopupProps {
     onClose: () => void;
+} 
+export interface Category {
+    id: number;
+    title: string;
+    text_color: string;
+    background_color: string;
 }
-  

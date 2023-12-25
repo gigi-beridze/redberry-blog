@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { blogDetailResponse } from "../../models/blog";
 
-export const BlogDetail = (data: any) => {
+export const BlogDetail = (data: blogDetailResponse) => {
     const blog = data.data;
+
     return (
         <div className="detail-blog">
             <Link to="/" className="detail-back-btn">

@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Category } from '../../models/filters';
+import { FiltersProps } from '../../models/filters';
+import { Category } from '../../models/global';
 
-interface FiltersProps {
-  onSelectCategory: (category: string) => void;
-}
-
-const Filters: React.FC<FiltersProps> = ({ onSelectCategory }) => {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+export const Filters: React.FC<FiltersProps> = ({ onSelectCategory }) => {
+  const [categories, setCategories] = useState<Category[]>([]),
+        [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   const fetchCategories = async () => {
     try {
-      const url = 'https://api.blog.redberryinternship.ge/api/categories/';
-      const token = 'af615548e1c85d4dc19c310b551d67dbdcd6db11d5e26961118f959931d50675';
-      const config = {
-        headers: { Authorization: `Bearer ${token}` },
-      };
+      const url = 'https://api.blog.redberryinternship.ge/api/categories/',
+            token = 'af615548e1c85d4dc19c310b551d67dbdcd6db11d5e26961118f959931d50675',
+            config = {
+              headers: { Authorization: `Bearer ${token}` },
+            },
+            response = await axios.get(url, config);
 
-      const response = await axios.get(url, config);
       setCategories(response.data.data);
     } catch (error) {
       console.error('API Error:', error);
@@ -28,6 +25,7 @@ const Filters: React.FC<FiltersProps> = ({ onSelectCategory }) => {
   useEffect(() => {
     fetchCategories();
     const storedCategories = localStorage.getItem('selectedCategories');
+
     if (storedCategories) {
       setSelectedCategories(JSON.parse(storedCategories));
     }
@@ -62,5 +60,3 @@ const Filters: React.FC<FiltersProps> = ({ onSelectCategory }) => {
 
   return <div className="filters">{renderFilterButtons()}</div>;
 };
-
-export default Filters;
