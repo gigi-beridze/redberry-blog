@@ -1,5 +1,6 @@
 // import utilities
 @import './utilities/variables';
+@import './utilities/error';
 
 // import partials
 @import './partials/navbar';
@@ -13,3 +14,4 @@
 @import './partials/addBlog';
 
 // import vendor styles
+@import './vendor/reset';

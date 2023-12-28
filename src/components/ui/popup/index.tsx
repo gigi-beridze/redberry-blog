@@ -39,7 +39,7 @@ export const Popup: React.FC<PopupProps> = ({ onClose }) => {
 }
 const closeAndReload = () => {
   onClose();
-  window.location.reload();
+  window.location.href= '/';
 };
   return (
     <div className="popup-overlay" onClick={onClose}>

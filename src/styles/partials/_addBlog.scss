@@ -1,4 +1,13 @@
 .add-blog {
+    padding-bottom: 110px;
+    background: rgba(251, 250, 255, 1);
+    .form-submit {
+        display: flex;
+        justify-content: end;
+    }
+    .pd-form-text {
+        margin-top: 24px;
+    }
     .navbar .container{
         justify-content: center;
     }
@@ -6,58 +15,193 @@
         padding-top: 7.5rem;
         display: flex;
         flex-direction: column;
-        background-color: red;
-        margin-left: 360px;
+        margin-left: 25%;
+        width: 600px;
 
+        .form-error {
+            margin-top: 8px;
+            margin-left: 20px;
+            
+            li {
+                color: #85858D;
+                font-size: 12px;
+                font-weight: 400;
+                margin-top: 6px;
+            }
+        }
+        .form-error-none {
+            margin-left: 0px;
+
+            li {
+                list-style: none;
+            }
+        }
+        .form-email-input::placeholder {
+            color: #85858D;
+        }
+        .form-submit {
+            margin-top: 40px;
+        }
+        .form-submit button {
+            width: 288px;
+            padding: 10px 20px; 
+            gap: 10px;
+            border-radius: 8px;
+            background: #E4E3EB;
+            border: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        input, textarea {
+            border-radius: 12px;
+            border: 1px solid #E4E3EB;
+            background: #FCFCFD;
+            text-indent: 16px;
+            color: #1A1A1F;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        input, textarea::placeholder {
+            color:#85858D;
+        }
+        input {
+            width: 288px;
+            height: 44px;
+            color:#1A1A1F;
+        }  
+        .date-input-container {
+            position: relative;
+        }
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+          
+          .date-icon {
+            position: absolute;
+            left: 16px;
+            top: 69%;
+            transform: translateY(-50%);
+            color: #888;
+          }
+          
+          .date-input {
+            padding-left: 16px;
+        }
+        .uploader {
+            margin-top: 40px;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px dashed #85858D;
+                height: 180px;
+                width: 600px;
+                background: #F4F3FF;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+            form:hover {
+                background: #F1EFFB;
+            }
+            .uploaded-row{
+                margin: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                border-radius: 5px;
+                background-color: #e9f0ff;
+            }
+            .upload-content{
+                display: flex;
+                align-items: center;
+            }
+            .input-field-uploader {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+            .input-field-uploader-text {
+                margin-top: 24px;
+            }   
+            .uploader-a {
+                font-weight: 500;
+                text-decoration-line: underline;
+            }
+           
+        }
+        .form-title {
+            margin-left: 24px;
+        }
         .add-blog-labels {
             color: #1A1A1F;
             font-size: 14px;
             font-weight: 500;
         }
-        .form-title span {
+        .add-blog-title span {
             color: #1A1A1F;
             font-size: 32px;
             font-weight: 700;
         }
-        .form-add-image {
-            display: flex;
-            flex-direction: column;
-            margin-top: 40px;
-            input {
-                width: 600px;
-            }
-        }
         .form-author-title {
             display: flex;
+            margin-top: 24px;
+        }
+        .form-inputs label {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-title {
+            margin-bottom: 8px;
+        }
+        .form-description {
+            max-width: 600px;
+
+            textarea { 
+                resize: none;
+                height: 124px;
+                padding-top: 12px;
+            }
         }
     }
 }
 
-
-
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #1475cf;
-    height: 300px;
-    width: 500px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .uploaded-row{
-    margin: 10px 0;
-    display: flex;
+.uploaded-image {
+    display: flex; 
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border-radius: 5px;
-    background-color: #e9f0ff;
-  }
-  
-  .upload-content{
-    display: flex;
-    align-items: center;
-  }
+    width: 600px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F2F2FA;
+    margin-top: 40px;
+    
+    .image-remove-form {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 16px;
+        margin-top: 4px;
+    }
+    form {
+        display: none;
+    }
+    
+    .uploaded-image-item {
+        display: flex;
+        align-items: center;
+   
+        .selected-image-form {
+            color: #1A1A1F;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        img {
+            margin: 0px 12px;
+        }
+    }
+}
