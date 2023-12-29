@@ -337,9 +337,8 @@ const [isValid, setIsValid] = useState(true)
 
 
 
-  const uploadedImage:any = localStorage.getItem('j')
-  console.log(uploadedImage)
   const submitForm = () => {
+    console.log('fa')
     const addBlog = async () => {
 
     try {
