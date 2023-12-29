@@ -10,7 +10,7 @@ export const Filters: React.FC<FiltersProps> = ({ onSelectCategory }) => {
   const fetchCategories = async () => {
     try {
       const url = 'https://api.blog.redberryinternship.ge/api/categories/',
-            token = 'af615548e1c85d4dc19c310b551d67dbdcd6db11d5e26961118f959931d50675',
+            token = '5695cf4697d45243e6bdab77e34fe2578befea217e5a12e7e7c925a217704ac2',
             config = {
               headers: { Authorization: `Bearer ${token}` },
             },
