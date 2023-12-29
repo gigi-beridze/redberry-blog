@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { AddBlogForm} from "../components/add-blog";
+import { SharedBlobStateProvider } from "../hooks/useBlob";
 
 export const AddBlog = () => {
     return (
@@ -11,7 +12,11 @@ export const AddBlog = () => {
                     </Link>
                 </div>
             </div>
+            <SharedBlobStateProvider>
+
             <AddBlogForm />
+            </SharedBlobStateProvider>
+
         </div>
     );
 };

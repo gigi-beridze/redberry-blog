@@ -43,7 +43,7 @@ export const Slider: React.FC<SliderProps> = (item: any) => {
       try {
         const categoryIds = itemCategory?.map((category: any) => category.id),
               url = 'https://api.blog.redberryinternship.ge/api/blogs/',
-              token = 'b5d0d96fd514c0fcf356195257373cc6603d5c32284b7b59cf859c4a3a3dd7f5',
+              token = '5695cf4697d45243e6bdab77e34fe2578befea217e5a12e7e7c925a217704ac2',
               config = {
                 headers: { Authorization: `Bearer ${token}` },
                 params: { categoryIds: categoryIds?.join(',') }

@@ -18,6 +18,7 @@
         margin-left: 25%;
         width: 600px;
 
+   
         .form-error {
             margin-top: 8px;
             margin-left: 20px;
@@ -73,10 +74,11 @@
         .date-input-container {
             position: relative;
         }
-        input[type="date"]::-webkit-inner-spin-button,
         input[type="date"]::-webkit-calendar-picker-indicator {
-            display: none;
-            -webkit-appearance: none;
+            background: transparent;
+            background-size: 20px;
+            width: 120px;
+            cursor: pointer;
         }
           
           .date-icon {
@@ -205,3 +207,78 @@
         }
     }
 }
+
+
+.select-input {
+    overflow: scroll !important;
+}
+.css-b62m3t-container {
+    max-width: 300px;
+}
+.css-1i837h3-ValueContainer2 {
+    -webkit-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
+    overflow: scroll;
+}
+
+.input-container {
+
+width: 288px;
+    height: 66px;
+    padding: 10px;
+    color: #1A1A1F;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD;
+    text-indent: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    overflow-y: hidden;
+    flex-direction: column;
+    overflow-x: auto;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    width: 70rem;
+
+    button {
+        margin-left: 6px;
+    }
+    .remove-btn {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.form-input-error {
+    border: 1px solid #EA1919 !important;
+
+    background: #FAF2F3 !important;
+  }
+  
+  .form-input-correct {
+    border: 1px solid #14D81C !important;
+
+    background: #F8FFF8 !important;
+  }
+
+  .input-container {
+    border: 1px solid #14D81C;
+
+    background: #F8FFF8;
+  }
+  .isOkayBtn {
+    background: #5D37F3 !important;
+    cursor: pointer;
+  }
