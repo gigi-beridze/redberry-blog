@@ -26,8 +26,8 @@
   "scripts": {
     "dev": "vite",
     "prod": "vite",
-    "build": "npm run dev"
-},
+    "build": "react-scripts build"
+  },
   "devDependencies": {
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
